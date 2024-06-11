@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  --text: 207,90%,4%;
+  --bg-default: 210,8%,95%;
+  --slider-thumb: 270, 50%, 60%;
+  --slider-bar: 270, 12%, 38%;
+
+}
+
+.candy{
+  --text: 210,8%,95%; 
+  --bg-default: 6, 99%, 68%;
+  --slider-thumb: 2, 100%, 50%;
+  --slider-bar: 2, 53%, 80%;
+}
+
+@media  (prefers-color-scheme: dark) {
+  :root{
+    --text: 210,8%,95%; 
+    --bg-default: 207,90%,4%;
+    --slider-thumb: 270, 50%, 60%;
+    --slider-bar: 270, 12%, 38%;
+  }
+}
+
+
+#segmentScroll{
+    appearance: none;
+    width: 200px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: hsla(var(--slider-bar));
+}
+
+#segmentScroll::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: hsla(var(--slider-thumb));
+    cursor: grab;
+}
+
+#segmentScroll::-webkit-slider-thumb:active{
+  cursor: grabbing;
+
+}
+
+#staggerScroll{
+    appearance: none;
+    width: 200px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: hsla(var(--slider-bar));
+
+}
+
+#staggerScroll::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: hsla(var(--slider-thumb));
+    cursor: grab;
+}
+
+#staggerScroll::-webkit-slider-thumb:active{
+  cursor: grabbing;
+
+}
+
+label{
+  cursor: pointer;
+}
+
+
+
+.flagLabel > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* FLAG  */
+
+@keyframes wind {
+    from {
+      transform: translateY(var(--billow));
+    }
+    to {
+      transform: translateY(calc(var(--billow) * -1));
+    }
+  }
+
+  .flag {
+    display: flex;
+    aspect-ratio: 3 / 2;
+    animation-duration: 600ms;
+  }
+
+  .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    animation: wind 500ms alternate infinite ease-in-out both;
+  }
+
+  .column:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  .column:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }

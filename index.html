@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Document</title>
+  </head>
+  <body class="overflow-x-hidden duration-300">
+    <section
+      class="bg-backrgound text-text flex h-screen w-screen items-center justify-center"
+    >
+      <div
+        class="containsAll flex h-[90%] w-[90%] flex-col items-center justify-center"
+      >
+        <div
+          class="header flex w-full flex-[0.2] items-center justify-end sm:justify-around"
+        >
+          <h1
+            class="hidden text-center font-pacifico text-[1.5rem] sm:inline sm:text-[3em]"
+          >
+            Happy Pride Month
+          </h1>
+          <label
+            for="candy"
+            class="relative z-0 h-[1.5rem] w-[3rem] overflow-hidden rounded-full bg-gray-400 sm:h-[2rem] sm:w-[4rem]"
+          >
+            <input
+              type="checkbox"
+              name="candy"
+              id="candy"
+              class="peer opacity-0"
+            />
+
+            <span
+              class="absolute left-0 top-0 aspect-square h-full rounded-full bg-gray-700 shadow-[-22px_0px_0px_10px_#fe9f94] duration-300 peer-checked:translate-x-[100%] peer-checked:bg-[#fe311b]"
+            ></span>
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute left-[3px] top-1/2 aspect-square h-[calc(100%-6px)] -translate-y-1/2 duration-300 peer-checked:translate-x-[calc(100%+6px)] peer-checked:fill-white"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M15.7 4C18.87 4 21 6.98 21 9.76C21 15.39 12.16 20 12 20C11.84 20 3 15.39 3 9.76C3 6.98 5.13 4 8.3 4C10.12 4 11.31 4.91 12 5.71C12.69 4.91 13.88 4 15.7 4Z"
+                  stroke="#fff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </label>
+        </div>
+        <div
+          class="flagSection flex h-[400px] w-full items-center justify-center sm:flex-[0.6]"
+        >
+          <div id="pride-flag" class="flag"></div>
+        </div>
+        <div
+          class="Controls flex w-full flex-[0.4] flex-col items-center justify-center gap-[1.5rem] text-[0.75rem] sm:flex-row sm:justify-around sm:text-[1rem]"
+        >
+          <label
+            for="segmentScroll"
+            class="flex h-fit w-fit flex-col items-center justify-center gap-[0.5rem]"
+          >
+            <span>No. Of Segments: <span class="segmentDisplay">10</span></span>
+            <div class="flex items-center justify-center gap-[0.5rem]">
+              <span>0</span>
+
+              <input
+                name="segmentScroll"
+                type="range"
+                id="segmentScroll"
+                min="0"
+                max="25"
+                step="1"
+                value="10"
+              />
+              <span>25</span>
+            </div>
+          </label>
+
+          <label
+            for="staggerScroll"
+            class="flex h-fit w-fit flex-col items-center justify-center gap-[0.5rem]"
+          >
+            <span>Stagger Delay: <span class="staggerDisplay">50</span></span>
+            <div class="flex items-center justify-center gap-[0.5rem]">
+              <span>0</span>
+
+              <input
+                name="staggerScroll"
+                type="range"
+                id="staggerScroll"
+                min="0"
+                max="100"
+                step="1"
+                value="50"
+              />
+              <span>100</span>
+            </div>
+          </label>
+
+          <div
+            class="flagLabel flex max-h-[8rem] w-[100%] flex-col flex-wrap items-start justify-center gap-[0.5rem] px-[1em] [column-gap:2rem] sm:w-[20em]"
+          >
+            <label for="rainbow" class="group relative">
+              <input
+                type="radio"
+                name="flagSelector"
+                id="rainbow"
+                value="rainbow"
+                class="peer opacity-0"
+              />
+              <span
+                class="border-sliders peer-checked:bg-sliders absolute left-0 top-1/2 h-[0.75rem] w-[0.75rem] -translate-y-1/2 rounded-full border-[2px] duration-200"
+              ></span>
+              <span>Rainbow</span>
+            </label>
+            <label for="pan" class="group relative">
+              <input
+                type="radio"
+                name="flagSelector"
+                id="pan"
+                value="pan"
+                class="peer opacity-0"
+              />
+              <span
+                class="border-sliders peer-checked:bg-sliders absolute left-0 top-1/2 h-[0.75rem] w-[0.75rem] -translate-y-1/2 rounded-full border-[2px] duration-200"
+              ></span>
+              <span>Pan</span>
+            </label>
+            <label for="trans" class="group relative">
+              <input
+                type="radio"
+                name="flagSelector"
+                id="trans"
+                value="trans"
+                class="peer opacity-0"
+              />
+              <span
+                class="border-sliders peer-checked:bg-sliders absolute left-0 top-1/2 h-[0.75rem] w-[0.75rem] -translate-y-1/2 rounded-full border-[2px] duration-200"
+              ></span>
+              <span>Trans</span>
+            </label>
+            <label for="lesbian" class="group relative">
+              <input
+                type="radio"
+                name="flagSelector"
+                id="lesbian"
+                value="lesbian"
+                class="peer opacity-0"
+              />
+              <span
+                class="border-sliders peer-checked:bg-sliders absolute left-0 top-1/2 h-[0.75rem] w-[0.75rem] -translate-y-1/2 rounded-full border-[2px] duration-200"
+              ></span>
+              <span>Lesbian</span>
+            </label>
+            <label for="gender_fluid" class="group relative">
+              <input
+                type="radio"
+                name="flagSelector"
+                id="gender_fluid"
+                value="gender_fluid"
+                class="peer opacity-0"
+              />
+              <span
+                class="border-sliders peer-checked:bg-sliders absolute left-0 top-1/2 h-[0.75rem] w-[0.75rem] -translate-y-1/2 rounded-full border-[2px] duration-200"
+              ></span>
+              <span>Gender Fluid</span>
+            </label>
+            <label for="gender_queer" class="group relative">
+              <input
+                type="radio"
+                name="flagSelector"
+                id="gender_queer"
+                value="gender_queer"
+                class="peer opacity-0"
+              />
+              <span
+                class="border-sliders peer-checked:bg-sliders absolute left-0 top-1/2 h-[0.75rem] w-[0.75rem] -translate-y-1/2 rounded-full border-[2px] duration-200"
+              ></span>
+              <span>Gender Queer</span>
+            </label>
+            <label for="asexual" class="group relative">
+              <input
+                type="radio"
+                name="flagSelector"
+                id="asexual"
+                value="asexual"
+                class="peer opacity-0"
+              />
+              <span
+                class="peer-checked:bg-sliders border-sliders absolute left-0 top-1/2 h-[0.75rem] w-[0.75rem] -translate-y-1/2 rounded-full border-[2px] duration-200"
+              ></span>
+              <span>Asexual</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
